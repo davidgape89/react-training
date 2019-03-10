@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.App > div {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.create-element-component {
+  background: lightgoldenrodyellow;
+}
+
+.class-component {
+  background: lightblue;
+}
+
+.class-pure-component {
+  background: lightcoral;
+
+  button {
+    margin-top: 10px;
+  }
+}
+
+.functional-component {
+  background: lightcyan;
+}
