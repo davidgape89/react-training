@@ -19,7 +19,6 @@ const config = (env, options) => {
                     exclude: /node_modules/,
                     use: 'babel-loader'
                 },
-                // TODO: Production mode for css
                 {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
