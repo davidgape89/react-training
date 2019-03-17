@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 const config = (env, options) => {
@@ -12,6 +13,9 @@ const config = (env, options) => {
         },
         mode: isProduction? 'production': 'development',
         devtool: isProduction? 'none': 'eval',
+        optimization: {
+            minimizer: [new UglifyJsPlugin()]
+        },
         module: {
             rules: [
                 {
@@ -20,8 +24,12 @@ const config = (env, options) => {
                     use: 'babel-loader'
                 },
                 {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                    test: /\.scss$/,
+                    use: [
+                        'style-loader', 
+                        'css-loader', 
+                        'sass-loader'
+                    ]
                 }
             ]
         },
