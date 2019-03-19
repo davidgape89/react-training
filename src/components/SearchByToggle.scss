@@ -1,0 +1,14 @@
+@import '../styles/variables';
+
+.search-by-toggle {
+  align-items: center;
+  display: flex;
+  color: $white;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+
+  > * {
+    margin-right: $medium-size;
+  }
+}
