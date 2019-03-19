@@ -1,0 +1,14 @@
+@import './variables';
+
+input {
+  background: rgba($black, .4);
+  border: none;
+  border-bottom: solid $light-red 2px;
+  color: $white;
+  padding: $medium-size;
+
+  &:focus {
+    background: rgba($black, .7);
+    outline: none;
+  }
+}

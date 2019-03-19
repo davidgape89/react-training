@@ -1,3 +1,15 @@
-h1 {
-  color: pink;
+@import './styles/button';
+@import './styles/input';
+@import './styles/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
