@@ -1,16 +1,16 @@
 @import '../styles/variables';
 
-$opacity-rgba: rgba(0, 0, 0, 0.7);
+$opacity-rgba: rgba(0, 0, 0, 0.6);
 
 .search-header {
   background: linear-gradient($opacity-rgba, $opacity-rgba), 
-              url('/assets/netflix-background.jpg');
+              url('/assets/netflix-background.jpg') top right;
   display: flex;
   justify-content: center;
 }
 
 .search-header__content {
-  min-width: 900px;
+  width: $main-layout-width;
   padding: $big-size;
 }
 
