@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import './SearchByToggle.scss';
 
-const SearchByToggle = (props) => {
+const SearchByToggle = ({onChange, value}) => {
 
   // Assign the color to the button according to whether it is
   // active or not
   const getClassList = (criteria) => {
-    const color = props.value === criteria? 'button--red': 'button--grey';
+    const color = value === criteria? 'button--red': 'button--grey';
     return `button button--small ${color}`;
   }
 
@@ -16,11 +16,11 @@ const SearchByToggle = (props) => {
     <div className="search-by-toggle">
       <span>SEARCH BY:</span>
       <button className={getClassList('title')}
-              onClick={() => props.onChange('title')}>
+              onClick={() => onChange('title')}>
         TITLE
       </button>
       <button className={getClassList('genre')}
-              onClick={() => props.onChange('genre')}>
+              onClick={() => onChange('genre')}>
         GENRE
       </button>
     </div>
