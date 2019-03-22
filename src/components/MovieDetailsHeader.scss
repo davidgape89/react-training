@@ -1,0 +1,63 @@
+@import '../styles/variables';
+
+$opacity-rgba: rgba(0, 0, 0, 0.6);
+
+.movie-details-header {
+  background: linear-gradient($opacity-rgba, $opacity-rgba), 
+              url('/assets/netflix-background.jpg') top right;
+  color: $white;
+  padding: $big-size 50px;
+}
+
+.movie-details-header__info {
+  padding: $medium-size;
+}
+
+.movie-details-header__first-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: $small-size;
+}
+
+.movie-details-header__third-row {
+  font-weight: 600;
+  margin: $small-size;
+
+  > span {
+    margin-right: $small-size;
+  }
+}
+
+.movie-details-header__title {
+  color: $light-red;
+  font-size: $big-size;
+  font-weight: 500;
+}
+
+.movie-details-header__vote-average {
+  border: 1px $white solid;
+  border-radius: $big-size;
+  margin-left: $medium-size;
+  padding: $small-size;
+}
+
+.movie-details-header__image {
+  margin-right: 50px;
+
+  img {
+    width: 270px;
+  }
+}
+
+.movie-details-header__details {
+  display: flex;
+}
+
+.movie-details-header__header {
+  align-items: center;
+  color: $light-red;
+  display: flex;
+  font-weight: 600;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
