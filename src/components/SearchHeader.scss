@@ -5,13 +5,7 @@ $opacity-rgba: rgba(0, 0, 0, 0.6);
 .search-header {
   background: linear-gradient($opacity-rgba, $opacity-rgba), 
               url('/assets/netflix-background.jpg') top right;
-  display: flex;
-  justify-content: center;
-}
-
-.search-header__content {
-  width: $main-layout-width;
-  padding: $big-size;
+  padding: $big-size 50px;
 }
 
 .search-header__title {
