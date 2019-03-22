@@ -1,0 +1,30 @@
+@import '../styles/variables';
+
+.movie-poster {
+  font-size: 10px;
+
+  img {
+    width: 260px;
+  }
+
+  > div {
+    padding: $small-size;
+  }
+}
+
+.movie-poster__info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+
+  .title {
+    font-size: 16px;
+  }
+
+  .year {
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 3px;
+  }
+}
