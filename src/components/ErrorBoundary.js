@@ -9,7 +9,6 @@ export class ErrorBoundary extends React.Component {
   }
 
   static getDerivedStateFromError(error) {
-    console.log('something');
     return { hasError: true };
   }
 
