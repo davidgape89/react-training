@@ -1,0 +1,17 @@
+@import '../styles/variables';
+
+.sort-by-toggle {
+  display: flex;
+
+  * {
+    margin-left: $small-size;
+  }
+
+  .sort-by-toggle__button {
+    cursor: pointer;
+
+    &.active {
+      color: $light-red;
+    }
+  }
+}
