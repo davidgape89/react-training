@@ -7,12 +7,14 @@ const MoviePoster = ({
   title, 
   genres,
   releaseDate,
-  posterUrl
+  posterUrl,
+  onPageChange
 }) => {
   const year = releaseDate.split('-')[0];
   const genre = genres.join(' & ');
   return (
-    <div className="movie-poster">
+    <div className="movie-poster" 
+         onClick={() => onPageChange('details')}>
       <img src={posterUrl} />
       <div>
         <div className="movie-poster__info">
