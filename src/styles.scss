@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.App {
+  margin: auto;
+  width: $main-layout-width;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
