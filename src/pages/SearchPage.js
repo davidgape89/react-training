@@ -2,7 +2,7 @@ import React from 'react';
 import {movies} from '../mocks/movie';
 import {SearchHeader} from '../components/SearchHeader';
 import {ResultHeader} from '../components/ResultHeader';
-import {MoviePoster} from '../components/MoviePoster';
+import {MovieList} from '../components/MovieList';
 import {Footer} from '../components/Footer';
 
 export class SearchPage extends React.PureComponent {
@@ -28,15 +28,8 @@ export class SearchPage extends React.PureComponent {
         <ResultHeader resultNumber={movies.length}
                       sortBy={this.state.sortBy}
                       onChange={this.onSortChange} />
-        <div className="search-page__movies">
-          {movies.map((movie) => (
-            <MoviePoster key={movie.id}
-                         title={movie.title}
-                         genres={movie.genres}
-                         posterUrl={movie.poster_path}
-                         releaseDate={movie.release_date} />
-          ))}
-        </div>
+        <MovieList movies={movies} 
+                   onPageChange={this.props.onPageChange}/>
         <Footer />
       </div>
     )
