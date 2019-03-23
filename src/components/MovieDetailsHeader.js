@@ -10,7 +10,8 @@ const MovieDetailsHeader = ({
   posterUrl,
   runtime,
   voteAverage,
-  overview
+  overview,
+  onPageChange
 }) => {
   const genre = genres.join(' & ');
   const year = releaseDate.split('-')[0];
@@ -18,7 +19,10 @@ const MovieDetailsHeader = ({
     <div className="movie-details-header">
       <div className="movie-details-header__header">
         <div>netflixroulette</div>
-        <button className="button button--white">Search</button>
+        <button className="button button--white"
+                onClick={() => onPageChange('search')}>
+          Search
+        </button>
       </div>
       <div className="movie-details-header__details">
         <div className="movie-details-header__image">
@@ -46,6 +50,7 @@ const MovieDetailsHeader = ({
   );
 }
 
+// onPageChange excluded since it will be handled by the router
 MovieDetailsHeader.propTypes = {
   title: PropTypes.string,
   genres: PropTypes.array,
