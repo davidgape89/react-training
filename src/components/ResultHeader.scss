@@ -1,0 +1,12 @@
+@import '../styles/variables';
+
+.result-header {
+  align-items: center;
+  background-color: $light-grey;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin: auto;
+  padding: 0 50px;
+  width: $main-layout-width;
+}

@@ -1,0 +1,54 @@
+@import './variables';
+$hover-offset: 10;
+$focus-offset: 20;
+
+@mixin pseudo-elements($color) {
+  &:hover {
+    background-color: darken($color, $hover-offset);
+  }
+
+  &:active {
+    background-color: darken($color, $focus-offset);
+  }
+}
+
+.button {
+  background-color: $white;
+  border: none;
+  color: $black;
+  font-weight: 600;
+  height: $big-size;
+  padding: 0 $medium-size;
+  border-radius: 3px;
+
+  &:focus {
+    outline: none;
+  }
+
+  @include pseudo-elements($white);
+}
+
+.button--small {
+  height: $medium-size;
+}
+
+.button--red {
+  background-color: $light-red;
+  color: $white;
+
+  @include pseudo-elements($light-red);
+}
+
+.button--white {
+  background-color: $white;
+  color: $light-red;
+
+  @include pseudo-elements($white);
+}
+
+.button--grey {
+  background-color: $grey;
+  color: $white;
+
+  @include pseudo-elements($grey);
+}

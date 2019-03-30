@@ -1,0 +1,32 @@
+@import '../styles/variables';
+
+$opacity-rgba: rgba(0, 0, 0, 0.6);
+
+.search-header {
+  background: linear-gradient($opacity-rgba, $opacity-rgba), 
+              url('/assets/netflix-background.jpg') top right;
+  padding: $big-size 50px;
+}
+
+.search-header__title {
+  color: $light-red;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.search-header__search-bar {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    color: $white;
+    font-weight: 600;
+    margin-bottom: $medium-size;
+  }
+}
+
+.search-header__bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $medium-size;
+}
