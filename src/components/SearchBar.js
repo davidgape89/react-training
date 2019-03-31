@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SearchBar = (props) => (
-  <input type="text" value={props.query} 
-         onChange={props.onChange}
-         onKeyPress={props.onKeyPress} 
-         placeholder={props.placeholder} />
+const SearchBar = ({query, placeholder, onChange, onKeyPress}) => (
+  <input type="text" value={query} 
+         onChange={onChange}
+         onKeyPress={onKeyPress} 
+         placeholder={placeholder} />
 )
 
 SearchBar.propTypes = {
@@ -15,4 +15,4 @@ SearchBar.propTypes = {
   onKeyPress: PropTypes.func
 };
 
-export {SearchBar};
+export default SearchBar;

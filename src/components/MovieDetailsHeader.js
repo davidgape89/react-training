@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './MovieDetailsHeader.scss';
-
 const MovieDetailsHeader = ({
   title,
   genres,
@@ -61,4 +59,4 @@ MovieDetailsHeader.propTypes = {
   overview: PropTypes.string
 };
 
-export {MovieDetailsHeader};
+export default MovieDetailsHeader;

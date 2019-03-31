@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './SearchByToggle.scss';
-
 const SearchByToggle = ({onChange, value}) => {
 
   // Assign the color to the button according to whether it is
@@ -32,4 +30,4 @@ SearchByToggle.propTypes = {
   onChange: PropTypes.func
 };
 
-export {SearchByToggle};
+export default SearchByToggle;

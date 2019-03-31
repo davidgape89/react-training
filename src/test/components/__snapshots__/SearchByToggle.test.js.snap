@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchByToggle - renders correctly 1`] = `
+<div
+  className="search-by-toggle"
+>
+  <span>
+    SEARCH BY:
+  </span>
+  <button
+    className="button button--small button--grey"
+    onClick={[Function]}
+  >
+    TITLE
+  </button>
+  <button
+    className="button button--small button--red"
+    onClick={[Function]}
+  >
+    GENRE
+  </button>
+</div>
+`;

@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieList - renders correctly 1`] = `
+<div
+  className="movie-poster"
+  onClick={[Function]}
+>
+  <img />
+  <div>
+    <div
+      className="movie-poster__info"
+    >
+      <div
+        className="title"
+      >
+        Fifty Shades Freed
+      </div>
+      <div
+        className="year"
+      >
+        2018
+      </div>
+    </div>
+    <div
+      className="genre"
+    >
+      Drama & Romance
+    </div>
+  </div>
+</div>
+`;

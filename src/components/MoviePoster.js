@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './MoviePoster.scss';
-
 const MoviePoster = ({
   title, 
   genres,
@@ -34,4 +32,4 @@ MoviePoster.propTypes = {
   posterUrl: PropTypes.string
 };
 
-export {MoviePoster};
+export default MoviePoster;
