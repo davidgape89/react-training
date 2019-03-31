@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "dependencies": {
     "babel-loader": "^8.0.5",
+    "cypress": "^3.2.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
@@ -32,6 +33,7 @@
   },
   "scripts": {
     "build": "webpack --config=webpack.prod.js",
+    "cypress:open": "cypress open",
     "devserver": "webpack-dev-server --config=webpack.dev.js",
     "start": "npm run devserver",
     "test": "jest --config=jest.config.json --watch"
