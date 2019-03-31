@@ -1,20 +1,11 @@
 import React from 'react';
-import {movies} from '../mocks/movie';
-import {MovieDetailsHeader} from '../components/MovieDetailsHeader';
-import {GenreHeader} from '../components/GenreHeader';
-import {MovieList} from '../components/MovieList';
-import {Footer} from '../components/Footer';
+import movies from '../mocks/movie';
+import MovieDetailsHeader from '../components/MovieDetailsHeader';
+import GenreHeader from '../components/GenreHeader';
+import MovieList from '../components/MovieList';
+import Footer from '../components/Footer';
 
-export class DetailsPage extends React.PureComponent {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-     
-    }
-  }
-
+export default class DetailsPage extends React.PureComponent {
   render() {
     return (
       <div className="details-page">

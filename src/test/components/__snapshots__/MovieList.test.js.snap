@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieList - renders correctly 1`] = `
+<div
+  className="movie-list"
+>
+  <MoviePoster
+    genres={
+      Array [
+        "Drama",
+        "Romance",
+      ]
+    }
+    key="337167"
+    onPageChange={[MockFunction]}
+    posterUrl="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    releaseDate="2018-02-07"
+    title="Fifty Shades Freed"
+  />
+  <MoviePoster
+    genres={
+      Array [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Comedy",
+      ]
+    }
+    key="269149"
+    onPageChange={[MockFunction]}
+    posterUrl="https://image.tmdb.org/t/p/w500/sM33SANp9z6rXW8Itn7NnG1GOEs.jpg"
+    releaseDate="2016-02-11"
+    title="Zootopia"
+  />
+  <MoviePoster
+    genres={
+      Array [
+        "Fantasy",
+        "Adventure",
+        "Science Fiction",
+      ]
+    }
+    key="181808"
+    onPageChange={[MockFunction]}
+    posterUrl="https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg"
+    releaseDate="2017-12-13"
+    title="Star Wars: The Last Jedi"
+  />
+  <MoviePoster
+    genres={
+      Array [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Science Fiction",
+      ]
+    }
+    key="284054"
+    onPageChange={[MockFunction]}
+    posterUrl="https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
+    releaseDate="2018-02-13"
+    title="Black Panther"
+  />
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GenreHeader - renders correctly 1`] = `
+<div
+  className="genre-header"
+>
+  <div
+    className="genre-header__genre"
+  >
+    Films by 
+    drama
+  </div>
+</div>
+`;

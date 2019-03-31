@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultHeader - renders correctly 1`] = `
+<div
+  className="result-header"
+>
+  <div
+    className="result-header__number"
+  >
+    1
+     
+    movie
+     found
+  </div>
+  <SortByToggle
+    onChange={[MockFunction]}
+    sortBy="drama"
+  />
+</div>
+`;

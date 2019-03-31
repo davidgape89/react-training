@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './SortByToggle.scss';
-
 const SortByToggle = ({sortBy, onChange}) => {
   // Assign the color to the button according to whether it is
   // active or not
@@ -15,11 +13,13 @@ const SortByToggle = ({sortBy, onChange}) => {
   return (
     <div className="sort-by-toggle">
       <div>Sort by</div>
-      <div onClick={() => onChange('release_date')}
+      <div id="release-date-button"
+           onClick={() => onChange('release_date')}
            className={getClassList('release_date')}>
         release date
       </div>
-      <div onClick={() => onChange('rating')}
+      <div id="rating-button"
+           onClick={() => onChange('rating')}
            className={getClassList('rating')}>
         rating
       </div>
@@ -32,4 +32,4 @@ SortByToggle.propTypes = {
   onChange: PropTypes.func
 };
 
-export {SortByToggle};
+export default SortByToggle;

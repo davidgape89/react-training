@@ -5,6 +5,9 @@
   "main": "src/app.js",
   "dependencies": {
     "babel-loader": "^8.0.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
     "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -31,7 +34,7 @@
     "build": "webpack --config=webpack.prod.js",
     "devserver": "webpack-dev-server --config=webpack.dev.js",
     "start": "npm run devserver",
-    "test": "jest --watch"
+    "test": "jest --config=jest.config.json --watch"
   },
   "repository": {
     "type": "git",

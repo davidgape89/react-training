@@ -1,7 +1,5 @@
 import React from 'react';
-import {MoviePoster} from './MoviePoster';
-
-import './MovieList.scss';
+import MoviePoster from './MoviePoster';
 
 const MovieList = ({movies, onPageChange}) => (
   <div className="movie-list">
@@ -16,4 +14,4 @@ const MovieList = ({movies, onPageChange}) => (
   </div>
 );
 
-export {MovieList};
+export default MovieList;

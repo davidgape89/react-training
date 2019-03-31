@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import {ErrorBoundary} from './components/ErrorBoundary';
-import {SearchPage} from './pages/SearchPage';
-import {DetailsPage} from './pages/DetailsPage';
+import SearchPage from './pages/SearchPage';
+import DetailsPage from './pages/DetailsPage';
 
 import 'normalize.css/normalize.css';
 import './styles.scss';

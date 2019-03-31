@@ -1,11 +1,11 @@
 import React from 'react';
-import {movies} from '../mocks/movie';
-import {SearchHeader} from '../components/SearchHeader';
-import {ResultHeader} from '../components/ResultHeader';
-import {MovieList} from '../components/MovieList';
-import {Footer} from '../components/Footer';
+import movies from '../mocks/movie';
+import SearchHeader from '../components/SearchHeader';
+import ResultHeader from '../components/ResultHeader';
+import MovieList from '../components/MovieList';
+import Footer from '../components/Footer';
 
-export class SearchPage extends React.PureComponent {
+export default class SearchPage extends React.PureComponent {
 
   constructor(props) {
     super(props);
