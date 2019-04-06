@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetailsHeader - renders correctly 1`] = `
+<div
+  className="movie-details-header"
+>
+  <div
+    className="movie-details-header__header"
+  >
+    <div>
+      netflixroulette
+    </div>
+    <button
+      className="button button--white"
+      onClick={[Function]}
+    >
+      Search
+    </button>
+  </div>
+  <div
+    className="movie-details-header__details"
+  >
+    <div
+      className="movie-details-header__image"
+    >
+      <img
+        src="http://someurl.com/image.jpg"
+      />
+    </div>
+    <div
+      className="movie-details-header__info"
+    >
+      <div
+        className="movie-details-header__first-row"
+      >
+        <div
+          className="movie-details-header__title"
+        >
+          test title
+        </div>
+        <div
+          className="movie-details-header__vote-average"
+        >
+          5
+        </div>
+      </div>
+      <div>
+        Drama & Action
+      </div>
+      <div
+        className="movie-details-header__third-row"
+      >
+        <span>
+          2009
+        </span>
+        <span>
+           min
+        </span>
+      </div>
+      <div>
+        This is a very nice movie
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,4 +1,4 @@
-export const movies = [
+export default [
   {
     "id": 337167,
     "title": "Fifty Shades Freed",

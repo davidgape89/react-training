@@ -1,10 +1,8 @@
 import React from 'react';
-import {SearchBar} from './SearchBar';
-import {SearchByToggle} from './SearchByToggle';
+import SearchBar from './SearchBar';
+import SearchByToggle from './SearchByToggle';
 
-import './SearchHeader.scss';
-
-export class SearchHeader extends React.PureComponent {
+export default class SearchHeader extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -29,7 +27,7 @@ export class SearchHeader extends React.PureComponent {
   }
 
   search = () => {
-    
+    console.log('search called');
   }
 
   render() {

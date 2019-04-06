@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortByToggle - renders correctly 1`] = `
+<div
+  className="sort-by-toggle"
+>
+  <div>
+    Sort by
+  </div>
+  <div
+    className="sort-by-toggle__button"
+    id="release-date-button"
+    onClick={[Function]}
+  >
+    release date
+  </div>
+  <div
+    className="sort-by-toggle__button active"
+    id="rating-button"
+    onClick={[Function]}
+  >
+    rating
+  </div>
+</div>
+`;

@@ -1,6 +1,15 @@
 @import './styles/button';
 @import './styles/input';
 @import './styles/variables';
+@import './styles/components/Footer';
+@import './styles/components/GenreHeader';
+@import './styles/components/MovieDetailsHeader';
+@import './styles/components/MovieList';
+@import './styles/components/MoviePoster';
+@import './styles/components/ResultHeader';
+@import './styles/components/SortByToggle';
+@import './styles/components/SearchHeader';
+@import './styles/components/SearchByToggle';
 
 * {
   box-sizing: border-box;
