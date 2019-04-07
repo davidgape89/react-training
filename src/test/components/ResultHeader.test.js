@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import ResultHeader from '../../components/ResultHeader';
+import {ResultHeader} from '../../components/ResultHeader';
 
 describe('ResultHeader -', () => {
   let wrapper, callbackFun;
@@ -10,7 +10,7 @@ describe('ResultHeader -', () => {
     callbackFun = jest.fn();
     wrapper = shallow(<ResultHeader resultNumber={1}
                                     sortBy={'drama'}
-                                    onChange={callbackFun} />);
+                                    handleChange={callbackFun} />);
   });
 
   it('renders correctly', () => {

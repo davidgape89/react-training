@@ -1,22 +1,17 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import SearchPage from '../../pages/SearchPage';
+import movies from '../../mocks/movie';
+import {SearchPage} from '../../pages/SearchPage';
 
 describe('SearchPage -', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<SearchPage />);
+    wrapper = shallow(<SearchPage movies={movies}/>);
   });
 
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot();
-  });
-
-  it('changes sort by correctly', () => {
-    wrapper.find('ResultHeader').prop('onChange')('rating');
-
-    expect(wrapper.state('sortBy')).toEqual('rating');
   });
 });

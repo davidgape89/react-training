@@ -10,7 +10,7 @@ describe('MovieList -', () => {
   beforeEach(() => {
     callbackFun = jest.fn();
     wrapper = shallow(<MovieList movies={movies} 
-                                 onPageChange={callbackFun} />);
+                                 handleMovieSelected={callbackFun} />);
   });
 
   it('renders correctly', () => {
@@ -20,7 +20,7 @@ describe('MovieList -', () => {
   it('calls the callback when the children component does', () => {
     wrapper.find('MoviePoster')
            .first()
-           .prop('onPageChange')();
+           .prop('handleMovieSelected')();
 
     expect(callbackFun).toHaveBeenCalled();
   })
