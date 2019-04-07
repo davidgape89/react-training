@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import SearchHeader from '../../components/SearchHeader';
+import {SearchHeader} from '../../components/SearchHeader';
 
 describe('SearchHeader -', () => {
   let wrapper;

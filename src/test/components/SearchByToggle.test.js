@@ -9,7 +9,7 @@ describe('SearchByToggle -', () => {
   beforeEach(() => {
     callbackFun = jest.fn();
     wrapper = shallow(<SearchByToggle onChange={callbackFun}
-                                      value="genre" />);
+                                      value="genres" />);
   });
 
   it('renders correctly', () => {

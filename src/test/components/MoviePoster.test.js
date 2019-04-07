@@ -13,7 +13,7 @@ describe('MovieList -', () => {
                                    genres={movies[0].genres}
                                    releaseDate={movies[0].release_date}
                                    posterUrl={movies[0].poster_url}
-                                   onPageChange={callbackFun} />);
+                                   handleMovieSelected={callbackFun} />);
   });
 
   it('renders correctly', () => {

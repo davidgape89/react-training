@@ -4,13 +4,11 @@ exports[`SearchPage - renders correctly 1`] = `
 <div
   className="search-page"
 >
-  <SearchHeader />
-  <ResultHeader
-    onChange={[Function]}
+  <Connect(SearchHeader) />
+  <Connect(ResultHeader)
     resultNumber={4}
-    sortBy="release_date"
   />
-  <MovieList
+  <_default
     movies={
       Array [
         Object {
