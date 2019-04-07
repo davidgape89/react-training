@@ -1,37 +1,38 @@
 import React from 'react';
-import movies from '../mocks/movie';
+import {connect} from 'react-redux';
+
+import {startMoviesRequest} from '../actions/movies';
+import moviesSelector from '../selectors/movies';
 import SearchHeader from '../components/SearchHeader';
 import ResultHeader from '../components/ResultHeader';
 import MovieList from '../components/MovieList';
 import Footer from '../components/Footer';
 
-export default class SearchPage extends React.PureComponent {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      sortBy: 'release_date'
-    }
-  }
-
-  onSortChange = (sortBy) => {
-    this.setState({sortBy: sortBy});
-  }
-
+export class SearchPage extends React.PureComponent {
   render() {
+    const {movies} = this.props;
     // Uncomment this line to test ErrorBoundary component
     // throw new Error('Something went wrong');
     return (
       <div className="search-page">
         <SearchHeader />
-        <ResultHeader resultNumber={movies.length}
-                      sortBy={this.state.sortBy}
-                      onChange={this.onSortChange} />
-        <MovieList movies={movies} 
-                   onPageChange={this.props.onPageChange}/>
+        {!!movies.length && (
+          <React.Fragment>
+          <ResultHeader resultNumber={movies.length} />
+          <MovieList movies={movies} 
+                handleMovieSelected={this.props.handleMovieSelected}/>
+          </React.Fragment>
+        )}
         <Footer />
       </div>
     )
   }
 }
+
+const mapStateToProps = ({movies, filters: {sortBy}}) => {
+  return {
+    movies: moviesSelector(movies, sortBy)
+  };
+}
+
+export default connect(mapStateToProps)(SearchPage);

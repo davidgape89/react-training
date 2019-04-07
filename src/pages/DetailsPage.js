@@ -1,26 +1,42 @@
 import React from 'react';
-import movies from '../mocks/movie';
+import {connect} from 'react-redux';
+import {startSuggestionsRequest} from '../actions/suggestions';
 import MovieDetailsHeader from '../components/MovieDetailsHeader';
 import GenreHeader from '../components/GenreHeader';
 import MovieList from '../components/MovieList';
 import Footer from '../components/Footer';
 
-export default class DetailsPage extends React.PureComponent {
+export class DetailsPage extends React.PureComponent {
+  componentDidMount() {
+    this.props.startSuggestionsRequest(this.props.movie.genres[0]);
+  }
+
   render() {
-    return (
+    return (this.props.movie !== undefined && (
       <div className="details-page">
-        <MovieDetailsHeader title={movies[0].title}
-                            genres={movies[0].genres}
-                            releaseDate={movies[0].release_date}
-                            posterUrl={movies[0].poster_path}
-                            runtime={movies[0].runtime}
-                            voteAverage={movies[0].vote_average}
-                            overview={movies[0].overview} 
+        <MovieDetailsHeader title={this.props.movie.title}
+                            genres={this.props.movie.genres}
+                            releaseDate={this.props.movie.release_date}
+                            posterUrl={this.props.movie.poster_path}
+                            runtime={this.props.movie.runtime}
+                            voteAverage={this.props.movie.vote_average}
+                            overview={this.props.movie.overview} 
                             onPageChange={this.props.onPageChange}/>
-        <GenreHeader genre={movies[0].genres[0]}/>
-        <MovieList movies={movies} />
+        <GenreHeader genre={this.props.movie.genres[0]}/>
+        <MovieList movies={this.props.suggestions} />
         <Footer />
       </div>
-    )
+    ))
   }
 }
+
+const mapStateToProps = ({movie, suggestions}) => ({
+  movie,
+  suggestions
+});
+
+const mapDispatchToProps = {
+  startSuggestionsRequest
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DetailsPage);

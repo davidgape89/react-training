@@ -2,17 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MoviePoster = ({
+  id,
   title, 
   genres,
   releaseDate,
   posterUrl,
-  onPageChange
+  handleMovieSelected
 }) => {
   const year = releaseDate.split('-')[0];
   const genre = genres.join(' & ');
   return (
     <div className="movie-poster" 
-         onClick={() => onPageChange('details')}>
+         onClick={() => handleMovieSelected(id)}>
       <img src={posterUrl} />
       <div>
         <div className="movie-poster__info">
