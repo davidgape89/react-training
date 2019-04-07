@@ -3,11 +3,10 @@
 .movie-list {
   background-color: $extra-light-grey;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  padding: $big-size;
-
+  
   .movie-poster {
-    margin-bottom: $big-size;
+    margin: 19px;
   }
 }

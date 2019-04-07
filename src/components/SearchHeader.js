@@ -1,8 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {startMoviesRequest} from '../actions/movies';
 import SearchBar from './SearchBar';
 import SearchByToggle from './SearchByToggle';
 
-export default class SearchHeader extends React.PureComponent {
+export class SearchHeader extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -27,7 +29,8 @@ export default class SearchHeader extends React.PureComponent {
   }
 
   search = () => {
-    console.log('search called');
+    const {query, searchBy} = this.state;
+    this.props.handleSearch(query, searchBy);
   }
 
   render() {
@@ -53,3 +56,9 @@ export default class SearchHeader extends React.PureComponent {
     );
   }
 }
+
+const mapDispatchToProps = {
+  handleSearch: startMoviesRequest
+};
+
+export default connect(null, mapDispatchToProps)(SearchHeader);

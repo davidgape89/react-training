@@ -4,6 +4,7 @@
   "description": "Repository for the react training",
   "main": "src/app.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
     "cypress": "^3.2.0",
     "enzyme": "^3.9.0",
@@ -14,6 +15,9 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "webpack": "^4.29.6"
   },
   "devDependencies": {
@@ -24,6 +28,7 @@
     "css-loader": "^2.1.1",
     "jest": "^24.5.0",
     "node-sass": "^4.11.0",
+    "redux-mock-store": "^1.5.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.1.2",
