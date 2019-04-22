@@ -10,8 +10,8 @@ describe('MoviePoster -', () => {
   beforeEach(() => {
     wrapper = shallow(<MoviePoster title={movies[0].title}
                                    genres={movies[0].genres}
-                                   releaseDate={movies[0].release_date}
-                                   posterUrl={movies[0].poster_url} />);
+                                   release_date={movies[0].release_date}
+                                   poster_path={movies[0].poster_url} />);
   });
 
   it('renders correctly', () => {

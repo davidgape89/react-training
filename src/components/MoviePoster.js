@@ -6,15 +6,15 @@ const MoviePoster = ({
   id,
   title, 
   genres,
-  releaseDate,
-  posterUrl,
+  release_date,
+  poster_path,
 }) => {
-  const year = releaseDate.split('-')[0];
+  const year = release_date.split('-')[0];
   const genre = genres.join(' & ');
   return (
     <Link to={`/film/${id}`}>
       <div className="movie-poster">
-        <img src={posterUrl} />
+        <img src={poster_path} />
         <div>
           <div className="movie-poster__info">
             <div className="title">{title}</div>
@@ -28,10 +28,11 @@ const MoviePoster = ({
 }
 
 MoviePoster.propTypes = {
+  id: PropTypes.number,
   title: PropTypes.string,
   genres: PropTypes.array,
-  releaseDate: PropTypes.string,
-  posterUrl: PropTypes.string
+  release_date: PropTypes.string,
+  poster_path: PropTypes.string
 };
 
 export default MoviePoster;

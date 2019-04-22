@@ -5,6 +5,7 @@ exports[`MovieList - renders correctly 1`] = `
   className="movie-list"
 >
   <MoviePoster
+    budget={55000000}
     genres={
       Array [
         "Drama",
@@ -13,11 +14,18 @@ exports[`MovieList - renders correctly 1`] = `
     }
     id={337167}
     key="337167"
-    posterUrl="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
-    releaseDate="2018-02-07"
+    overview="Believing they have left behind shadowy figures from their past, newlyweds Christian and Ana fully embrace an inextricable connection and shared life of luxury. But just as she steps into her role as Mrs. Grey and he relaxes into an unfamiliar stability, new threats could jeopardize their happy ending before it even begins."
+    poster_path="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
+    release_date="2018-02-07"
+    revenue={136906000}
+    runtime={106}
+    tagline="Don't miss the climax"
     title="Fifty Shades Freed"
+    vote_average={6.1}
+    vote_count={1195}
   />
   <MoviePoster
+    budget={150000000}
     genres={
       Array [
         "Animation",
@@ -28,11 +36,18 @@ exports[`MovieList - renders correctly 1`] = `
     }
     id={269149}
     key="269149"
-    posterUrl="https://image.tmdb.org/t/p/w500/sM33SANp9z6rXW8Itn7NnG1GOEs.jpg"
-    releaseDate="2016-02-11"
+    overview="Determined to prove herself, Officer Judy Hopps, the first bunny on Zootopia's police force, jumps at the chance to crack her first case - even if it means partnering with scam-artist fox Nick Wilde to solve the mystery."
+    poster_path="https://image.tmdb.org/t/p/w500/sM33SANp9z6rXW8Itn7NnG1GOEs.jpg"
+    release_date="2016-02-11"
+    revenue={1023784195}
+    runtime={108}
+    tagline="Welcome to the urban jungle."
     title="Zootopia"
+    vote_average={7.7}
+    vote_count={6795}
   />
   <MoviePoster
+    budget={200000000}
     genres={
       Array [
         "Fantasy",
@@ -42,11 +57,18 @@ exports[`MovieList - renders correctly 1`] = `
     }
     id={181808}
     key="181808"
-    posterUrl="https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg"
-    releaseDate="2017-12-13"
+    overview="Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order."
+    poster_path="https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg"
+    release_date="2017-12-13"
+    revenue={1325937250}
+    runtime={152}
+    tagline="The Saga Continues"
     title="Star Wars: The Last Jedi"
+    vote_average={7.1}
+    vote_count={4732}
   />
   <MoviePoster
+    budget={200000000}
     genres={
       Array [
         "Action",
@@ -57,9 +79,15 @@ exports[`MovieList - renders correctly 1`] = `
     }
     id={284054}
     key="284054"
-    posterUrl="https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
-    releaseDate="2018-02-13"
+    overview="King T'Challa returns home from America to the reclusive, technologically advanced African nation of Wakanda to serve as his country's new leader. However, T'Challa soon finds that he is challenged for the throne by factions within his own country as well as without.  Using powers reserved to Wakandan kings, T'Challa assumes the Black Panther mantel to join with girlfriend Nakia, the queen-mother, his princess-kid sister,  members of the Dora Milaje (the Wakandan \\"special forces\\"), and an American secret agent, to prevent Wakanda from being dragged into a world war."
+    poster_path="https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"
+    release_date="2018-02-13"
+    revenue={1245257672}
+    runtime={134}
+    tagline="Long live the king"
     title="Black Panther"
+    vote_average={7.3}
+    vote_count={3788}
   />
 </div>
 `;
