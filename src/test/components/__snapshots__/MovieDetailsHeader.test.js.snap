@@ -10,12 +10,15 @@ exports[`MovieDetailsHeader - renders correctly 1`] = `
     <div>
       netflixroulette
     </div>
-    <button
-      className="button button--white"
-      onClick={[Function]}
+    <Link
+      to="/search"
     >
-      Search
-    </button>
+      <button
+        className="button button--white"
+      >
+        Search
+      </button>
+    </Link>
   </div>
   <div
     className="movie-details-header__details"

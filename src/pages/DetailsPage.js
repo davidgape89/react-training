@@ -21,7 +21,7 @@ export class DetailsPage extends React.PureComponent {
     this.unlisten = this.props.history.listen((location) => {
       if(location.pathname.match(/\/film/)) {
         const id = location.pathname.match(/film\/([\d ]*)/)[1];
-        this.fetchMovie(id);
+        this.fetchMovie(parseInt(id));
       }
     });
   }

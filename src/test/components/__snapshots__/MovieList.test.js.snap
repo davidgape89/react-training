@@ -11,7 +11,6 @@ exports[`MovieList - renders correctly 1`] = `
         "Romance",
       ]
     }
-    handleMovieSelected={[MockFunction]}
     id={337167}
     key="337167"
     posterUrl="https://image.tmdb.org/t/p/w500/3kcEGnYBHDeqmdYf8ZRbKdfmlUy.jpg"
@@ -27,7 +26,6 @@ exports[`MovieList - renders correctly 1`] = `
         "Comedy",
       ]
     }
-    handleMovieSelected={[MockFunction]}
     id={269149}
     key="269149"
     posterUrl="https://image.tmdb.org/t/p/w500/sM33SANp9z6rXW8Itn7NnG1GOEs.jpg"
@@ -42,7 +40,6 @@ exports[`MovieList - renders correctly 1`] = `
         "Science Fiction",
       ]
     }
-    handleMovieSelected={[MockFunction]}
     id={181808}
     key="181808"
     posterUrl="https://image.tmdb.org/t/p/w500/kOVEVeg59E0wsnXmF9nrh6OmWII.jpg"
@@ -58,7 +55,6 @@ exports[`MovieList - renders correctly 1`] = `
         "Science Fiction",
       ]
     }
-    handleMovieSelected={[MockFunction]}
     id={284054}
     key="284054"
     posterUrl="https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg"

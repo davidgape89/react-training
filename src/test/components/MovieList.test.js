@@ -9,19 +9,10 @@ describe('MovieList -', () => {
 
   beforeEach(() => {
     callbackFun = jest.fn();
-    wrapper = shallow(<MovieList movies={movies} 
-                                 handleMovieSelected={callbackFun} />);
+    wrapper = shallow(<MovieList movies={movies} />);
   });
 
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('calls the callback when the children component does', () => {
-    wrapper.find('MoviePoster')
-           .first()
-           .prop('handleMovieSelected')();
-
-    expect(callbackFun).toHaveBeenCalled();
-  })
 });
