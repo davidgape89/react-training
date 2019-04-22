@@ -1,6 +1,5 @@
 import React from "react";
 import {Provider} from 'react-redux';
-import {startMovieRequest} from './actions/movie';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import ReactDOM from "react-dom";
 import configureStore from './store/configureStore';
@@ -20,7 +19,7 @@ class App extends React.Component {
         <Router>
           <Provider store = {store}>
             <div className="App">
-              <Route exact path={['/','/search']} component={SearchPage} />
+              <Route exact={true} path={['/','/search']} component={SearchPage} />
               <Route path="/search/:query" component={SearchPage} />
               <Route path="/film/:id" component={DetailsPage} />
             </div>

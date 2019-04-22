@@ -22,11 +22,13 @@ export class SearchPage extends React.PureComponent {
 
     this.fetchMovies(query, searchBy);
 
-    this.unlisten = this.props.history.listen((location, action) => {
-      const query = location.pathname.match(/search\/([\w ]*)/)[1];
-      const searchBy = queryString.parse(location.search).searchBy || '';
+    this.unlisten = this.props.history.listen((location) => {
+      if(location.pathname.match(/\/search/)) {
+        const query = location.pathname.match(/search\/([\w ]*)/)[1];
+        const searchBy = queryString.parse(location.search).searchBy || '';
 
-      this.fetchMovies(query, searchBy);
+        this.fetchMovies(query, searchBy);
+      }
     });
   }
 
@@ -44,8 +46,7 @@ export class SearchPage extends React.PureComponent {
         {!!movies.length && (
           <React.Fragment>
             <ResultHeader resultNumber={movies.length} />
-            <MovieList movies={movies} 
-                  handleMovieSelected={this.props.handleMovieSelected}/>
+            <MovieList movies={movies}/>
           </React.Fragment>
         )}
         <Footer />

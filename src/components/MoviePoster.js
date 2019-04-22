@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 const MoviePoster = ({
   id,
@@ -7,22 +8,22 @@ const MoviePoster = ({
   genres,
   releaseDate,
   posterUrl,
-  handleMovieSelected
 }) => {
   const year = releaseDate.split('-')[0];
   const genre = genres.join(' & ');
   return (
-    <div className="movie-poster" 
-         onClick={() => handleMovieSelected(id)}>
-      <img src={posterUrl} />
-      <div>
-        <div className="movie-poster__info">
-          <div className="title">{title}</div>
-          <div className="year">{year}</div>
+    <Link to={`/film/${id}`}>
+      <div className="movie-poster">
+        <img src={posterUrl} />
+        <div>
+          <div className="movie-poster__info">
+            <div className="title">{title}</div>
+            <div className="year">{year}</div>
+          </div>
+          <div className="genre">{genre}</div>
         </div>
-        <div className="genre">{genre}</div>
       </div>
-    </div>
+    </Link>
   );
 }
 

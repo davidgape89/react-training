@@ -11,7 +11,7 @@ export class SearchHeader extends React.PureComponent {
 
     const {searchBy} = queryString.parse(this.props.location.search); 
     this.state = {
-      query: this.props.match.params.query,
+      query: this.props.match.params.query || '',
       searchBy: searchBy || 'title'
     }
   }
