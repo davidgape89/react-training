@@ -9,6 +9,12 @@ import MovieList from '../components/MovieList';
 import Footer from '../components/Footer';
 
 export class SearchPage extends React.PureComponent {
+  componentDidMount() {
+    const query = this.props.match.params.query;
+    if(query) 
+      this.props.startMoviesRequest(query);
+  }
+
   render() {
     const {movies} = this.props;
     // Uncomment this line to test ErrorBoundary component
@@ -18,9 +24,9 @@ export class SearchPage extends React.PureComponent {
         <SearchHeader />
         {!!movies.length && (
           <React.Fragment>
-          <ResultHeader resultNumber={movies.length} />
-          <MovieList movies={movies} 
-                handleMovieSelected={this.props.handleMovieSelected}/>
+            <ResultHeader resultNumber={movies.length} />
+            <MovieList movies={movies} 
+                  handleMovieSelected={this.props.handleMovieSelected}/>
           </React.Fragment>
         )}
         <Footer />
@@ -35,4 +41,8 @@ const mapStateToProps = ({movies, filters: {sortBy}}) => {
   };
 }
 
-export default connect(mapStateToProps)(SearchPage);
+const mapDispatchToProps = {
+  startMoviesRequest
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);
