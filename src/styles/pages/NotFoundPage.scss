@@ -1,0 +1,9 @@
+@import '../variables';
+
+.not-found-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: $big-size;
+  text-align: center;
+}
