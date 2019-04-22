@@ -21,7 +21,7 @@ exports[`DetailsPage - renders correctly 1`] = `
   <GenreHeader
     genre="Drama"
   />
-  <MovieList
+  <_default
     movies={
       Array [
         Object {

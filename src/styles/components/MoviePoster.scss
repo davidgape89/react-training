@@ -1,9 +1,11 @@
 @import '../variables';
 
 .movie-poster {
+  cursor: pointer;
   font-size: 10px;
 
   img {
+    height: 400px;
     width: 260px;
   }
 
@@ -13,18 +15,23 @@
 }
 
 .movie-poster__info {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   justify-content: space-between;
   margin-bottom: 4px;
 
   .title {
     font-size: 16px;
+    max-width: 200px;
   }
 
   .year {
     border: 1px solid grey;
     border-radius: 2px;
     padding: 3px;
+  }
+
+  .genre {
+    max-width: 200px;
   }
 }

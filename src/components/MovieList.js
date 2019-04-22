@@ -1,17 +1,16 @@
 import React from 'react';
 import MoviePoster from './MoviePoster';
 
-const MovieList = ({movies, onPageChange}) => (
+export default ({movies, handleMovieSelected}) => (
   <div className="movie-list">
     {movies.map((movie) => (
       <MoviePoster key={movie.id}
+                  id={movie.id}
                   title={movie.title}
                   genres={movie.genres}
                   posterUrl={movie.poster_path}
                   releaseDate={movie.release_date}
-                  onPageChange={onPageChange} />
+                  handleMovieSelected={handleMovieSelected} />
     ))}
   </div>
 );
-
-export default MovieList;

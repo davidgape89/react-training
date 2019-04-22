@@ -17,8 +17,8 @@ const SearchByToggle = ({onChange, value}) => {
               onClick={() => onChange('title')}>
         TITLE
       </button>
-      <button className={getClassList('genre')}
-              onClick={() => onChange('genre')}>
+      <button className={getClassList('genres')}
+              onClick={() => onChange('genres')}>
         GENRE
       </button>
     </div>

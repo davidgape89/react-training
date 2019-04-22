@@ -1,14 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+
+import {setSortBy} from '../actions/filters';
 import SortByToggle from './SortByToggle';
 
-const ResultHeader = ({resultNumber, sortBy, onChange}) => (
+export const ResultHeader = ({resultNumber, sortBy, handleChange}) => (
   <div className="result-header">
     <div className="result-header__number">
       {resultNumber} {resultNumber !== 1? 'movies': 'movie'} found
     </div>
     <SortByToggle sortBy={sortBy}
-                  onChange={onChange}/>
+                  onChange={handleChange}/>
   </div>
 )
 
@@ -18,4 +21,12 @@ ResultHeader.propTypes = {
   onChange: PropTypes.func
 };
 
-export default ResultHeader;
+const mapStateToProps = ({filters}) => ({
+  sortBy: filters.sortBy
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  handleChange: (sortBy) => dispatch(setSortBy(sortBy))
+});
+
+export default connect(mapStateToProps,mapDispatchToProps)(ResultHeader);
