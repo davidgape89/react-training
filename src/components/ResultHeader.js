@@ -25,8 +25,8 @@ const mapStateToProps = ({filters}) => ({
   sortBy: filters.sortBy
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  handleChange: (sortBy) => dispatch(setSortBy(sortBy))
-});
+const mapDispatchToProps = {
+  handleChange: setSortBy
+};
 
 export default connect(mapStateToProps,mapDispatchToProps)(ResultHeader);
