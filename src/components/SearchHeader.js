@@ -1,6 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {startMoviesRequest} from '../actions/movies';
+import queryString from 'query-string';
+import {Link, withRouter} from 'react-router-dom';
+
 import SearchBar from './SearchBar';
 import SearchByToggle from './SearchByToggle';
 
@@ -8,9 +9,10 @@ export class SearchHeader extends React.PureComponent {
   constructor(props) {
     super(props);
 
+    const {searchBy} = queryString.parse(this.props.location.search); 
     this.state = {
-      query: '',
-      searchBy: 'title'
+      query: this.props.match.params.query,
+      searchBy: searchBy || 'title'
     }
   }
 
@@ -18,19 +20,14 @@ export class SearchHeader extends React.PureComponent {
     this.setState({query: event.target.value});
   }
 
-  onKeyPress = (event) => {
-    if(event.key === "Enter") {
-      this.search();
-    }
-  }
-
   changeSearchBy = (criteria) => {
     this.setState({searchBy: criteria});
   }
 
-  search = () => {
-    const {query, searchBy} = this.state;
-    this.props.handleSearch(query, searchBy);
+  onKeyPress = (event) => {
+    if(event.key === "Enter") {
+      this.props.history.push(`/search/${this.state.query}?searchBy=${this.state.searchBy}`);
+    }
   }
 
   render() {
@@ -49,16 +46,13 @@ export class SearchHeader extends React.PureComponent {
         <div className="search-header__bottom-bar">
           <SearchByToggle value={this.state.searchBy}
                           onChange={this.changeSearchBy}/>
-          <button className="button button--red" 
-                  onClick={this.search}>SEARCH</button>
+          <Link to={`/search/${this.state.query}?searchBy=${this.state.searchBy}`}>
+            <button className="button button--red">SEARCH</button>
+          </Link>
         </div>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = {
-  handleSearch: startMoviesRequest
-};
-
-export default connect(null, mapDispatchToProps)(SearchHeader);
+export default withRouter(SearchHeader);

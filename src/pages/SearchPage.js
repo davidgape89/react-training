@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import queryString from 'query-string';
 
 import {startMoviesRequest} from '../actions/movies';
 import moviesSelector from '../selectors/movies';
@@ -9,10 +10,28 @@ import MovieList from '../components/MovieList';
 import Footer from '../components/Footer';
 
 export class SearchPage extends React.PureComponent {
+
+  fetchMovies(query, searchBy) {
+    if(query) 
+      this.props.startMoviesRequest(query, searchBy);
+  }
+  
   componentDidMount() {
     const query = this.props.match.params.query;
-    if(query) 
-      this.props.startMoviesRequest(query);
+    const searchBy = queryString.parse(this.props.location.search).searchBy || '';
+
+    this.fetchMovies(query, searchBy);
+
+    this.unlisten = this.props.history.listen((location, action) => {
+      const query = location.pathname.match(/search\/([\w ]*)/)[1];
+      const searchBy = queryString.parse(location.search).searchBy || '';
+
+      this.fetchMovies(query, searchBy);
+    });
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
   }
 
   render() {
