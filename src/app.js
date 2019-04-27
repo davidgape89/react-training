@@ -6,13 +6,14 @@ import configureStore from './store/configureStore';
 import {ErrorBoundary} from './components/ErrorBoundary';
 import SearchPage from './pages/SearchPage';
 import DetailsPage from './pages/DetailsPage';
+import {hot} from 'react-hot-loader';
 
 import 'normalize.css/normalize.css';
 import './styles.scss';
 
 const store = configureStore();
 
-class App extends React.Component {
+export class App extends React.Component {
   constructor(props) {
     super(props);
 
@@ -46,4 +47,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.hydrate(hot(module)(<App />), document.getElementById("root"));
