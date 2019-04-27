@@ -6,6 +6,7 @@ export const startMovieRequest = (id) =>
   (dispatch) => axios.get(`${baseUrl}/movies/${id}`)
     .then(({data}) => {
       dispatch(setMovie(data))
+      return data;
     });
 
 

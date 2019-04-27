@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 const MovieDetailsHeader = ({
   title,
@@ -17,10 +18,11 @@ const MovieDetailsHeader = ({
     <div className="movie-details-header">
       <div className="movie-details-header__header">
         <div>netflixroulette</div>
-        <button className="button button--white"
-                onClick={() => onPageChange('search')}>
-          Search
-        </button>
+        <Link to="/search">
+          <button className="button button--white">
+            Search
+          </button>
+        </Link>
       </div>
       <div className="movie-details-header__details">
         <div className="movie-details-header__image">

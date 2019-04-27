@@ -13,9 +13,11 @@
     "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
+    "query-string": "^6.4.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",
+    "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "webpack": "^4.29.6"
@@ -40,6 +42,7 @@
     "build": "webpack --config=webpack.prod.js",
     "cypress:open": "cypress open",
     "devserver": "webpack-dev-server --config=webpack.dev.js",
+    "debug": "node --inspect-brk node_modules/.bin/jest --runInBand --config=jest.config.json --watch",
     "start": "npm run devserver",
     "test": "jest --config=jest.config.json --watch"
   },

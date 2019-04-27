@@ -23,10 +23,4 @@ describe('MovieDetailsHeader -', () => {
   it('renders correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('calls callback when search button is clicked', () => {
-    wrapper.find('button').simulate('click');
-
-    expect(mockFun).toHaveBeenCalledWith('search');
-  });
 });

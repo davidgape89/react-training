@@ -4,10 +4,28 @@ import {shallow} from 'enzyme';
 import {SearchHeader} from '../../components/SearchHeader';
 
 describe('SearchHeader -', () => {
-  let wrapper;
-
+  let wrapper, reactRouterMock, location, match, history;
+  
   beforeEach(() => {
-    wrapper = shallow(<SearchHeader />);
+    reactRouterMock = {
+      location: {
+        search: '?something=else'
+      }
+    };
+    location = {
+      search: null
+    };
+    match = {
+      params: {}
+    }
+    history = {
+      push: jest.fn()
+    }
+    wrapper = shallow(<SearchHeader 
+      location={location}
+      match={match}
+      history={history}/>
+    );
   });
 
   it('renders correctly', () => {
@@ -29,30 +47,18 @@ describe('SearchHeader -', () => {
     const mockEvent = {
       key: 'Enter'
     };
-    const spy = spyOn(wrapper.instance(), 'search');
     wrapper.find('SearchBar').prop('onKeyPress')(mockEvent);
 
-    expect(spy).toHaveBeenCalled();
+    expect(history.push).toHaveBeenCalled();
   });
-
-  // This won't pass for some reason, I'll wait until this is connected
-  // to the state and pass a mock function as prop instead
-  // it('calls search function on search button click', () => {
-  //   const spy = spyOn(wrapper.instance(), 'search');
-  //   wrapper.update();
-  //   wrapper.find('button').simulate('click');
-
-  //   expect(spy).toHaveBeenCalled();
-  // });
 
   it('does not call search function when other keys are pressed', () => {
     const mockEvent = {
       key: 'j'
     };
-    const spy = spyOn(wrapper.instance(), 'search');
     wrapper.find('SearchBar').prop('onKeyPress')(mockEvent);
 
-    expect(spy).not.toHaveBeenCalled();
+    expect(history.push).not.toHaveBeenCalled();
   });
 
   it('changes search by correctly', () => {

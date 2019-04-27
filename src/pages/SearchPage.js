@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import queryString from 'query-string';
 
 import {startMoviesRequest} from '../actions/movies';
 import moviesSelector from '../selectors/movies';
@@ -9,6 +10,32 @@ import MovieList from '../components/MovieList';
 import Footer from '../components/Footer';
 
 export class SearchPage extends React.PureComponent {
+
+  fetchMovies(query, searchBy) {
+    if(query) 
+      this.props.startMoviesRequest(query, searchBy);
+  }
+  
+  componentDidMount() {
+    const query = this.props.match.params.query;
+    const searchBy = queryString.parse(this.props.location.search).searchBy || '';
+
+    this.fetchMovies(query, searchBy);
+
+    this.unlisten = this.props.history.listen((location) => {
+      if(location.pathname.match(/\/search/)) {
+        const query = location.pathname.match(/search\/([\w ]*)/)[1];
+        const searchBy = queryString.parse(location.search).searchBy || '';
+
+        this.fetchMovies(query, searchBy);
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.unlisten();
+  }
+
   render() {
     const {movies} = this.props;
     // Uncomment this line to test ErrorBoundary component
@@ -18,9 +45,8 @@ export class SearchPage extends React.PureComponent {
         <SearchHeader />
         {!!movies.length && (
           <React.Fragment>
-          <ResultHeader resultNumber={movies.length} />
-          <MovieList movies={movies} 
-                handleMovieSelected={this.props.handleMovieSelected}/>
+            <ResultHeader resultNumber={movies.length} />
+            <MovieList movies={movies}/>
           </React.Fragment>
         )}
         <Footer />
@@ -35,4 +61,8 @@ const mapStateToProps = ({movies, filters: {sortBy}}) => {
   };
 }
 
-export default connect(mapStateToProps)(SearchPage);
+const mapDispatchToProps = {
+  startMoviesRequest
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

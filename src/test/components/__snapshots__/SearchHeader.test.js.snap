@@ -29,12 +29,15 @@ exports[`SearchHeader - renders correctly 1`] = `
       onChange={[Function]}
       value="title"
     />
-    <button
-      className="button button--red"
-      onClick={[Function]}
+    <Link
+      to="/search/?searchBy=title"
     >
-      SEARCH
-    </button>
+      <button
+        className="button button--red"
+      >
+        SEARCH
+      </button>
+    </Link>
   </div>
 </div>
 `;

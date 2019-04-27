@@ -4,7 +4,7 @@ exports[`SearchPage - renders correctly 1`] = `
 <div
   className="search-page"
 >
-  <Connect(SearchHeader) />
+  <withRouter(SearchHeader) />
   <Connect(ResultHeader)
     resultNumber={4}
   />

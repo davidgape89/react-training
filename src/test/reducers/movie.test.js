@@ -7,12 +7,12 @@ describe('movieReducer -', () => {
       type: '@@INIT'
     });
 
-    expect(state).toEqual({});
+    expect(state).toEqual(null);
   });
 
   it('sets the movie correctly', () => {
     const movie = movies[0];
-    const state = movieReducer({}, {
+    const state = movieReducer(null, {
       type: 'SET_MOVIE',
       payload: {
         movie

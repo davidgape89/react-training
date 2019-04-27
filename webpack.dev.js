@@ -7,7 +7,9 @@ module.exports = merge(common, {
   devtool: 'eval',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    compress: true
+    compress: true,
+    publicPath: '/',
+    historyApiFallback: true
   },
   watch: true
 })
