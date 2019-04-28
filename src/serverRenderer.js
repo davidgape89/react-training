@@ -1,6 +1,6 @@
 import React from 'react';
 import {renderToString} from 'react-dom/server';
-import App from './app';
+import Root from './root';
 
 function renderHTML(html) {
   return `
@@ -26,7 +26,7 @@ function renderHTML(html) {
 
 export default function serverRenderer() {
   return (req,res) => {
-    const htmlString = renderToString(<App />);
+    const htmlString = renderToString(<Root />);
 
     res.send(renderHTML(htmlString));
   }

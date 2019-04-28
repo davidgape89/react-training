@@ -5,9 +5,6 @@ const path = require('path');
 module.exports = merge(common, {
   name: 'client',
   mode: 'development',
+  target: 'web',
   devtool: 'eval',
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true
-  },
 })

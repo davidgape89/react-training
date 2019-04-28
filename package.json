@@ -12,6 +12,7 @@
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
     "express": "^4.16.4",
+    "next": "^8.1.0",
     "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -49,7 +50,8 @@
     "cypress:open": "cypress open",
     "devserver": "webpack-dev-server --config=webpack.dev.js",
     "start": "npm run devserver",
-    "test": "jest --config=jest.config.json --watch"
+    "test": "jest --config=jest.config.json --watch",
+    "nextServer": "next"
   },
   "repository": {
     "type": "git",
