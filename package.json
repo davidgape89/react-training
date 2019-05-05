@@ -10,6 +10,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
+    "next": "^8.1.0",
     "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -39,6 +40,7 @@
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
+    "next": "next dev src/",
     "build": "webpack --config=webpack.prod.js",
     "cypress:open": "cypress open",
     "devserver": "webpack-dev-server --config=webpack.dev.js",
