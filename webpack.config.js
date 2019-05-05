@@ -1,4 +1,3 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -14,14 +13,13 @@ module.exports = {
           exclude: /node_modules/,
           use: 'babel-loader'
       },
-      {
-          test: /\.(css|scss)$/,
-          use: [
-              'style-loader', 
-              'css-loader', 
-              'sass-loader'
-          ]
-      }
+      // {
+      //     test: /\.(css|scss)$/,
+      //     use: [
+      //         'css-loader', 
+      //         'sass-loader'
+      //     ]
+      // }
     ]
   }
 };

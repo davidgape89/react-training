@@ -4,7 +4,7 @@ import React from 'react';
 import withReduxStore from '../lib/with-redux-store';
 import {Provider} from 'react-redux';
 
-import '../styles.css';
+import '../styles.scss';
 
 class NetflixRoulette extends App {
   render() {

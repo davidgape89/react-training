@@ -1,25 +1,25 @@
-// @import './styles/button';
-// @import './styles/input';
-// @import './styles/variables';
-// @import './styles/components/Footer';
-// @import './styles/components/GenreHeader';
-// @import './styles/components/MovieDetailsHeader';
-// @import './styles/components/MovieList';
-// @import './styles/components/MoviePoster';
-// @import './styles/components/ResultHeader';
-// @import './styles/components/SortByToggle';
-// @import './styles/components/SearchHeader';
-// @import './styles/components/SearchByToggle';
-// @import './styles/pages/NotFoundPage';
+@import './styles/button';
+@import './styles/input';
+@import './styles/variables';
+@import './styles/components/Footer';
+@import './styles/components/GenreHeader';
+@import './styles/components/MovieDetailsHeader';
+@import './styles/components/MovieList';
+@import './styles/components/MoviePoster';
+@import './styles/components/ResultHeader';
+@import './styles/components/SortByToggle';
+@import './styles/components/SearchHeader';
+@import './styles/components/SearchByToggle';
+@import './styles/pages/NotFoundPage';
 
 * {
   box-sizing: border-box;
 }
 
-// .App {
-//   margin: auto;
-//   width: $main-layout-width;
-// }
+.App {
+  margin: auto;
+  width: $main-layout-width;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
