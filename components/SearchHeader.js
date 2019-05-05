@@ -1,6 +1,7 @@
 import React from 'react';
-import queryString from 'query-string';
-import {Link, withRouter} from 'react-router-dom';
+//import queryString from 'query-string';
+//import {Link, withRouter} from 'react-router-dom';
+import Link from 'next/link';
 
 import SearchBar from './SearchBar';
 import SearchByToggle from './SearchByToggle';
@@ -9,10 +10,10 @@ export class SearchHeader extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    const {searchBy} = queryString.parse(this.props.location.search); 
+    //const {searchBy} = queryString.parse(this.props.location.search); 
     this.state = {
-      query: this.props.match.params.query || '',
-      searchBy: searchBy || 'title'
+      query: '',
+      searchBy: 'title'
     }
   }
 
@@ -46,7 +47,7 @@ export class SearchHeader extends React.PureComponent {
         <div className="search-header__bottom-bar">
           <SearchByToggle value={this.state.searchBy}
                           onChange={this.changeSearchBy}/>
-          <Link to={`/search/${this.state.query}?searchBy=${this.state.searchBy}`}>
+          <Link href={`/search/${this.state.query}?searchBy=${this.state.searchBy}`}>
             <button className="button button--red">SEARCH</button>
           </Link>
         </div>
@@ -55,4 +56,4 @@ export class SearchHeader extends React.PureComponent {
   }
 }
 
-export default withRouter(SearchHeader);
+export default SearchHeader;
