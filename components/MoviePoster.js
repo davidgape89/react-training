@@ -12,7 +12,7 @@ const MoviePoster = ({
   const year = releaseDate.split('-')[0];
   const genre = genres.join(' & ');
   return (
-    <Link to={`/film/${id}`}>
+    <Link href={`/film/${id}`}>
       <div className="movie-poster">
         <img src={posterUrl} />
         <div>

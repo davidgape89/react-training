@@ -10,15 +10,31 @@ app
   .then(() => {
     const server = express();
 
-    server.get('/search/:query', (req, res) => {
-      console.log('> handled by search handler');
+    server.get('/search/', (req, res) => {
       const actualPage = '/';
-      const queryParams = {searchBy: req.params.query};
+      const queryParams = {searchQuery: ''};
+      app.render(req, res, actualPage, queryParams);
+    });
+
+    server.get('/search/:query', (req, res) => {
+      const actualPage = '/';
+      const queryParams = {
+        ...req.query,
+        searchQuery: req.params.query
+      };
+      app.render(req, res, actualPage, queryParams);
+    });
+
+    server.get('/film/:id', (req, res) => {
+      const actualPage = '/film';
+      const queryParams = {
+        ...req.query,
+        id: req.params.id
+      };
       app.render(req, res, actualPage, queryParams);
     });
 
     server.get('*', (req, res) => {
-      console.log('> handled by general handler');
       return handle(req, res)
     });
 

@@ -10,11 +10,13 @@ class NetflixRoulette extends App {
   render() {
     const { Component, pageProps, reduxStore } = this.props;
     return (
-      <Container>
-        <Provider store={reduxStore}>
-          <Component {...pageProps} />
-        </Provider>
-      </Container>
+      <div className="App">
+        <Container>
+          <Provider store={reduxStore}>
+            <Component {...pageProps} />
+          </Provider>
+        </Container>
+      </div>
     );
   }
 }

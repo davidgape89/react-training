@@ -1,7 +1,6 @@
 import React from 'react';
-//import queryString from 'query-string';
-//import {Link, withRouter} from 'react-router-dom';
 import Link from 'next/link';
+import {withRouter} from 'next/router';
 
 import SearchBar from './SearchBar';
 import SearchByToggle from './SearchByToggle';
@@ -9,11 +8,10 @@ import SearchByToggle from './SearchByToggle';
 export class SearchHeader extends React.PureComponent {
   constructor(props) {
     super(props);
-
-    //const {searchBy} = queryString.parse(this.props.location.search); 
+    
     this.state = {
-      query: '',
-      searchBy: 'title'
+      query: props.router.query.searchQuery || '',
+      searchBy: props.router.query.searchBy || 'title'
     }
   }
 
@@ -27,7 +25,7 @@ export class SearchHeader extends React.PureComponent {
 
   onKeyPress = (event) => {
     if(event.key === "Enter") {
-      this.props.history.push(`/search/${this.state.query}?searchBy=${this.state.searchBy}`);
+      this.props.router.push(`/search/${this.state.query}?searchBy=${this.state.searchBy}`);
     }
   }
 
@@ -56,4 +54,4 @@ export class SearchHeader extends React.PureComponent {
   }
 }
 
-export default SearchHeader;
+export default withRouter(SearchHeader);

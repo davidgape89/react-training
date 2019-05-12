@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 
 const MovieDetailsHeader = ({
   title,
@@ -14,11 +14,12 @@ const MovieDetailsHeader = ({
 }) => {
   const genre = genres.join(' & ');
   const year = releaseDate.split('-')[0];
+  
   return (
     <div className="movie-details-header">
       <div className="movie-details-header__header">
         <div>netflixroulette</div>
-        <Link to="/search">
+        <Link href="/search">
           <button className="button button--white">
             Search
           </button>
@@ -50,7 +51,6 @@ const MovieDetailsHeader = ({
   );
 }
 
-// onPageChange excluded since it will be handled by the router
 MovieDetailsHeader.propTypes = {
   title: PropTypes.string,
   genres: PropTypes.array,
