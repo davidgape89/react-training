@@ -2,7 +2,7 @@
 
 exports[`MoviePoster - renders correctly 1`] = `
 <Link
-  to="/film/undefined"
+  href="/film/undefined"
 >
   <div
     className="movie-poster"
