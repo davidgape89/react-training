@@ -1,9 +1,9 @@
-import filtersReducer, {defaultState} from '../../reducers/filters';
+import filtersReducer, { defaultState } from '../../reducers/filters';
 
 describe('filtersReducer -', () => {
   it('sets up correctly', () => {
     const state = filtersReducer(undefined, {
-      type: '@@INIT'
+      type: '@@INIT',
     });
 
     expect(state).toEqual(defaultState);
@@ -14,8 +14,8 @@ describe('filtersReducer -', () => {
     const state = filtersReducer(defaultState, {
       type: 'SET_SORT',
       payload: {
-        sortBy
-      }
+        sortBy,
+      },
     });
 
     expect(state.sortBy).toBe(sortBy);

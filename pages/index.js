@@ -23,10 +23,6 @@ export class SearchPage extends React.PureComponent {
     this.fetchMovies(query, searchBy);
   }
 
-  componentWillUnmount() {
-    this.unlisten();
-  }
-
   render() {
     const {movies} = this.props;
     return (

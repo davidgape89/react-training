@@ -4,7 +4,7 @@ import movies from '../../mocks/movie';
 describe('suggestionsReducer -', () => {
   it('sets up correctly', () => {
     const state = suggestionsReducer(undefined, {
-      type: '@@INIT'
+      type: '@@INIT',
     });
 
     expect(state).toEqual([]);
@@ -14,8 +14,8 @@ describe('suggestionsReducer -', () => {
     const state = suggestionsReducer(undefined, {
       type: 'ADD_SUGGESTIONS',
       payload: {
-        movies
-      }
+        movies,
+      },
     });
 
     expect(state).toBe(movies);

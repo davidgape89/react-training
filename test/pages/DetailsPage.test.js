@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 
 import movies from '../../mocks/movie';
-import {DetailsPage} from '../../pages/DetailsPage';
+import {DetailsPage} from '../../pages/film';
 
 describe('DetailsPage -', () => {
   let wrapper, 
@@ -14,8 +14,8 @@ describe('DetailsPage -', () => {
     const historyMock = {
       listen: (fn) => locationCallback = fn
     };
-    const match = {
-      params: {
+    const routerMock = {
+      query: {
         id: 1
       }
     };
@@ -26,9 +26,8 @@ describe('DetailsPage -', () => {
       movie={movies[0]}
       suggestions={movies}
       startMovieRequest={startMovieRequestMock} 
-      startSuggestionsRequest={startSuggestionRequestMock}
-      history={historyMock}
-      match={match}/>
+      startSuggestionsRequest={startSuggestionRequestMock} 
+      router={routerMock}/>
     );
   });
 
@@ -42,11 +41,5 @@ describe('DetailsPage -', () => {
 
   it('requests suggestions when the movie has been received', () => {
     expect(startSuggestionRequestMock).toHaveBeenCalledWith(movies[0].genres[0]);
-  });
-
-  it('requests again when the location changed', () => {
-    locationCallback({pathname: '/film/2'});
-
-    expect(startMovieRequestMock).toHaveBeenCalledWith(2);
   });
 });

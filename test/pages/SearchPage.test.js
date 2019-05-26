@@ -1,34 +1,25 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 
 import movies from '../../mocks/movie';
-import {SearchPage} from '../../pages/SearchPage';
+import { SearchPage } from '../../pages/index';
 
 describe('SearchPage -', () => {
-  let wrapper,
-      startSuggestionRequestMock, 
-      startMoviesRequestMock, 
-      locationMock,
-      locationCallback;
+  let wrapper;
+  let startMoviesRequestMock;
 
   beforeEach(() => {
-    const historyMock = {
-      listen: (fn) => locationCallback = fn
+    const routerMock = {
+      query: {
+        searchQuery: 'searchquery',
+      },
     };
-    const matchMock = {
-      params: {
-        query: 'searchquery'
-      }
-    };
-    const locationMock = {
-      search: '?searchBy=title'
-    }
     startMoviesRequestMock = jest.fn();
-    wrapper = shallow(<SearchPage movies={movies}
-                                  startMoviesRequest={startMoviesRequestMock}
-                                  location={locationMock}
-                                  match={matchMock}
-                                  history={historyMock}/>);
+    wrapper = shallow(<SearchPage
+      movies={movies}
+      startMoviesRequest={startMoviesRequestMock}
+      router={routerMock}
+    />);
   });
 
   it('renders correctly', () => {
@@ -37,11 +28,5 @@ describe('SearchPage -', () => {
 
   it('requests movies correctly', () => {
     expect(startMoviesRequestMock).toHaveBeenCalledWith('searchquery', 'title');
-  });
-
-  it('requests movies when location changes', () => {
-    locationCallback({pathname: '/search/searchquery2', search: '?searchBy=genre'});
-
-    expect(startMoviesRequestMock).toHaveBeenCalledWith('searchquery2', 'genre');
   });
 });
