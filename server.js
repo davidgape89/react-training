@@ -12,7 +12,7 @@ app
 
     server.get('/search/', (req, res) => {
       const actualPage = '/';
-      const queryParams = {searchQuery: ''};
+      const queryParams = { searchQuery: '' };
       app.render(req, res, actualPage, queryParams);
     });
 
@@ -20,7 +20,7 @@ app
       const actualPage = '/';
       const queryParams = {
         ...req.query,
-        searchQuery: req.params.query
+        searchQuery: req.params.query,
       };
       app.render(req, res, actualPage, queryParams);
     });
@@ -29,21 +29,19 @@ app
       const actualPage = '/film';
       const queryParams = {
         ...req.query,
-        id: req.params.id
+        id: req.params.id,
       };
       app.render(req, res, actualPage, queryParams);
     });
 
-    server.get('*', (req, res) => {
-      return handle(req, res)
-    });
+    server.get('*', (req, res) => handle(req, res));
 
-    server.listen(3000, err => {
-      if (err) throw err
-      console.log('> Ready on http://localhost:3000')
+    server.listen(3000, (err) => {
+      if (err) throw err;
+      console.log('> Ready on http://localhost:3000');
     });
   })
-  .catch(ex => {
+  .catch((ex) => {
     console.error(ex.stack);
     process.exit(1);
   });

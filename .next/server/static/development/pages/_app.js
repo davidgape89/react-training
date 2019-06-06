@@ -93,10 +93,10 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./lib/with-redux-store.js":
-/*!*********************************!*\
-  !*** ./lib/with-redux-store.js ***!
-  \*********************************/
+/***/ "./lib/with-redux-store.jsx":
+/*!**********************************!*\
+  !*** ./lib/with-redux-store.jsx ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -104,7 +104,7 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _store_configureStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/configureStore */ "./store/configureStore.js");
+/* harmony import */ var _store_configureStore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../store/configureStore */ "./store/configureStore.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -763,10 +763,10 @@ exports.createUrl = createUrl;
 
 /***/ }),
 
-/***/ "./pages/_app.js":
-/*!***********************!*\
-  !*** ./pages/_app.js ***!
-  \***********************/
+/***/ "./pages/_app.jsx":
+/*!************************!*\
+  !*** ./pages/_app.jsx ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -778,7 +778,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _lib_with_redux_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/with-redux-store */ "./lib/with-redux-store.js");
+/* harmony import */ var _lib_with_redux_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/with-redux-store */ "./lib/with-redux-store.jsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles.scss */ "./styles.scss");
@@ -841,10 +841,10 @@ function (_App) {
 
 /***/ }),
 
-/***/ "./reducers/filters.js":
-/*!*****************************!*\
-  !*** ./reducers/filters.js ***!
-  \*****************************/
+/***/ "./reducers/filters.jsx":
+/*!******************************!*\
+  !*** ./reducers/filters.jsx ***!
+  \******************************/
 /*! exports provided: defaultState, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -878,10 +878,10 @@ var defaultState = {
 
 /***/ }),
 
-/***/ "./reducers/movie.js":
-/*!***************************!*\
-  !*** ./reducers/movie.js ***!
-  \***************************/
+/***/ "./reducers/movie.jsx":
+/*!****************************!*\
+  !*** ./reducers/movie.jsx ***!
+  \****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -905,10 +905,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./reducers/movies.js":
-/*!****************************!*\
-  !*** ./reducers/movies.js ***!
-  \****************************/
+/***/ "./reducers/movies.jsx":
+/*!*****************************!*\
+  !*** ./reducers/movies.jsx ***!
+  \*****************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -932,10 +932,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./reducers/suggestions.js":
-/*!*********************************!*\
-  !*** ./reducers/suggestions.js ***!
-  \*********************************/
+/***/ "./reducers/suggestions.jsx":
+/*!**********************************!*\
+  !*** ./reducers/suggestions.jsx ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -959,10 +959,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./store/configureStore.js":
-/*!*********************************!*\
-  !*** ./store/configureStore.js ***!
-  \*********************************/
+/***/ "./store/configureStore.jsx":
+/*!**********************************!*\
+  !*** ./store/configureStore.jsx ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -974,10 +974,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-devtools-extension */ "redux-devtools-extension");
 /* harmony import */ var redux_devtools_extension__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _reducers_filters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/filters */ "./reducers/filters.js");
-/* harmony import */ var _reducers_movie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../reducers/movie */ "./reducers/movie.js");
-/* harmony import */ var _reducers_movies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/movies */ "./reducers/movies.js");
-/* harmony import */ var _reducers_suggestions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../reducers/suggestions */ "./reducers/suggestions.js");
+/* harmony import */ var _reducers_filters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reducers/filters */ "./reducers/filters.jsx");
+/* harmony import */ var _reducers_movie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../reducers/movie */ "./reducers/movie.jsx");
+/* harmony import */ var _reducers_movies__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../reducers/movies */ "./reducers/movies.jsx");
+/* harmony import */ var _reducers_suggestions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../reducers/suggestions */ "./reducers/suggestions.jsx");
 
 
 
@@ -1009,13 +1009,13 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!****************************************!*\
-  !*** multi private-next-pages/_app.js ***!
-  \****************************************/
+/*!*****************************************!*\
+  !*** multi private-next-pages/_app.jsx ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
+module.exports = __webpack_require__(/*! private-next-pages/_app.jsx */"./pages/_app.jsx");
 
 
 /***/ }),

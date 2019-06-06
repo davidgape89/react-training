@@ -1,8 +1,8 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {withRouter} from 'next/router';
+import { connect } from 'react-redux';
+import { withRouter } from 'next/router';
 
-import {startMoviesRequest} from '../actions/movies';
+import { startMoviesRequest } from '../actions/movies';
 import moviesSelector from '../selectors/movies';
 import SearchHeader from '../components/SearchHeader';
 import ResultHeader from '../components/ResultHeader';
@@ -10,42 +10,43 @@ import MovieList from '../components/MovieList';
 import Footer from '../components/Footer';
 
 export class SearchPage extends React.PureComponent {
-
-  fetchMovies(query, searchBy) {
-    if(query) 
-      this.props.startMoviesRequest(query, searchBy);
-  }
-  
   componentDidMount() {
-    const query = this.props.router.query.searchQuery;
-    const searchBy = this.props.router.query.searchBy || 'title';
+    const { router } = this.props;
+    const query = router.query.searchQuery;
+    const searchBy = router.query.searchBy || 'title';
 
     this.fetchMovies(query, searchBy);
   }
 
+  fetchMovies(query, searchBy) {
+    const { startMoviesRequest } = this.props;
+
+    if (query) {
+      startMoviesRequest(query, searchBy);
+    }
+  }
+
   render() {
-    const {movies} = this.props;
+    const { movies } = this.props;
     return (
       <div className="search-page">
         <SearchHeader />
-          <React.Fragment>
-            <ResultHeader resultNumber={movies.length} />
-            <MovieList movies={movies}/>
-          </React.Fragment>
+        <React.Fragment>
+          <ResultHeader resultNumber={movies.length} />
+          <MovieList movies={movies} />
+        </React.Fragment>
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-const mapStateToProps = ({movies, filters: {sortBy}}) => {
-  return {
-    movies: moviesSelector(movies, sortBy)
-  };
-}
+const mapStateToProps = (state) => ({
+  movies: moviesSelector(state),
+});
 
 const mapDispatchToProps = {
-  startMoviesRequest
-}
+  startMoviesRequest,
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchPage));

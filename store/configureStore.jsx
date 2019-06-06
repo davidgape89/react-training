@@ -1,6 +1,6 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import filtersReducer from '../reducers/filters';
 import movieReducer from '../reducers/movie';
@@ -15,8 +15,8 @@ export default () => {
       movie: movieReducer,
       suggestions: suggestionsReducer,
     }),
-    composeWithDevTools(applyMiddleware(thunk))
+    composeWithDevTools(applyMiddleware(thunk)),
   );
 
   return store;
-}
+};
