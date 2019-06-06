@@ -1,3 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchHeader - renders correctly 1`] = `undefined`;
+exports[`SearchHeader - renders correctly 1`] = `
+<div
+  className="search-header"
+>
+  <div
+    className="search-header__title"
+  >
+    netflixroulette
+  </div>
+  <div
+    className="search-header__search-bar"
+  >
+    <label>
+      FIND YOUR MOVIE
+    </label>
+    <SearchBar
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      placeholder="Some movie title or genre"
+      query=""
+    />
+  </div>
+  <div
+    className="search-header__bottom-bar"
+  >
+    <SearchByToggle
+      onChange={[Function]}
+      value="title"
+    />
+    <Link
+      href="/search/?searchBy=title"
+    >
+      <button
+        className="button button--red"
+      >
+        SEARCH
+      </button>
+    </Link>
+  </div>
+</div>
+`;

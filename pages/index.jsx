@@ -41,7 +41,7 @@ export class SearchPage extends React.PureComponent {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   movies: moviesSelector(state),
 });
 

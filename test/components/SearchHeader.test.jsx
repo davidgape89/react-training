@@ -4,27 +4,18 @@ import {shallow} from 'enzyme';
 import {SearchHeader} from '../../components/SearchHeader';
 
 describe('SearchHeader -', () => {
-  let wrapper, reactRouterMock, location, match, history;
+  let wrapper, routerMock;
   
   beforeEach(() => {
-    reactRouterMock = {
-      location: {
-        search: '?something=else'
-      }
+    routerMock = {
+      query: {
+        searchQuery: '',
+        searchBy: 'title'
+      },
+      push: jest.fn(),
     };
-    location = {
-      search: null
-    };
-    match = {
-      params: {}
-    }
-    history = {
-      push: jest.fn()
-    }
     wrapper = shallow(<SearchHeader 
-      location={location}
-      match={match}
-      history={history}/>
+      router={routerMock}/>
     );
   });
 
@@ -49,7 +40,7 @@ describe('SearchHeader -', () => {
     };
     wrapper.find('SearchBar').prop('onKeyPress')(mockEvent);
 
-    expect(history.push).toHaveBeenCalled();
+    expect(routerMock.push).toHaveBeenCalled();
   });
 
   it('does not call search function when other keys are pressed', () => {
@@ -58,7 +49,7 @@ describe('SearchHeader -', () => {
     };
     wrapper.find('SearchBar').prop('onKeyPress')(mockEvent);
 
-    expect(history.push).not.toHaveBeenCalled();
+    expect(routerMock.push).not.toHaveBeenCalled();
   });
 
   it('changes search by correctly', () => {

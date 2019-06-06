@@ -1,3 +1,1 @@
-export default (movies, id) => {
-  return movies[id];
-}
+export default (movies, id) => movies[id];
