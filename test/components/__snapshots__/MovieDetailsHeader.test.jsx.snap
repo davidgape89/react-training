@@ -11,7 +11,7 @@ exports[`MovieDetailsHeader - renders correctly 1`] = `
       netflixroulette
     </div>
     <Link
-      to="/search"
+      href="/search"
     >
       <button
         className="button button--white"

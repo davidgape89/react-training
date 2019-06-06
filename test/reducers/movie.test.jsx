@@ -4,7 +4,7 @@ import movies from '../../mocks/movie';
 describe('movieReducer -', () => {
   it('sets up correctly', () => {
     const state = movieReducer(undefined, {
-      type: '@@INIT'
+      type: '@@INIT',
     });
 
     expect(state).toEqual(null);
@@ -15,8 +15,8 @@ describe('movieReducer -', () => {
     const state = movieReducer(null, {
       type: 'SET_MOVIE',
       payload: {
-        movie
-      }
+        movie,
+      },
     });
 
     expect(state).toBe(movies[0]);

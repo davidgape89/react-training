@@ -1,0 +1,6 @@
+dist/
+.next
+coverage
+cypress/
+mocks/
+server

@@ -13,6 +13,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
+    "express": "^4.17.1",
     "next": "^8.1.0",
     "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1",
@@ -25,6 +26,7 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
     "webpack": "^4.29.6"
   },
   "devDependencies": {
@@ -33,7 +35,13 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "css-loader": "1.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
     "jest": "^24.5.0",
+    "jshint": "^2.10.2",
     "node-sass": "^4.12.0",
     "redux-mock-store": "^1.5.3",
     "sass-loader": "^7.1.0",
@@ -45,12 +53,12 @@
   },
   "scripts": {
     "next": "node server.js",
-    "build": "webpack --config=webpack.prod.js",
     "cypress:open": "cypress open",
     "devserver": "webpack-dev-server --config=webpack.dev.js",
     "debug": "node --inspect-brk node_modules/.bin/jest --runInBand --config=jest.config.json --watch",
     "start": "npm run devserver",
-    "test": "jest --config=jest.config.json --watch"
+    "test": "jest --config=jest.config.json --watch",
+    "eslint": "eslint ./**/**.jsx"
   },
   "repository": {
     "type": "git",

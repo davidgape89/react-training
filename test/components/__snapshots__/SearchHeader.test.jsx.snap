@@ -30,7 +30,7 @@ exports[`SearchHeader - renders correctly 1`] = `
       value="title"
     />
     <Link
-      to="/search/?searchBy=title"
+      href="/search/?searchBy=title"
     >
       <button
         className="button button--red"
